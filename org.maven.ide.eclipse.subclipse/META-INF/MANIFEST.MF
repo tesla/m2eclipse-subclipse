@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Maven SCM handler for Subclipse
+Bundle-SymbolicName: org.maven.ide.eclipse.subclipse;singleton:=true
+Bundle-Version: 0.10.1.qualifier
+Bundle-Activator: org.maven.ide.eclipse.subclipse.MavenSubclipsePlugin
+Bundle-Vendor: Sonatype, Inc.
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.team.core,
+ org.eclipse.team.ui,
+ org.tigris.subversion.subclipse.core,
+ org.tigris.subversion.subclipse.ui,
+ org.maven.ide.eclipse;bundle-version="[0.10.0,0.11.0)",
+ org.maven.ide.eclipse.maven_embedder;bundle-version="[0.10.0,0.11.0)"
+Eclipse-LazyStart: true
+Bundle-RequiredExecutionEnvironment: J2SE-1.5,
+ JavaSE-1.6

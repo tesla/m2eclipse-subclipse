@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2008 Sonatype, Inc.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+-->
+<?eclipse version="3.2"?>
+<plugin>
+
+  <extension point="org.maven.ide.eclipse.scmHandlers">
+     <handler type="svn" priority="10" class="org.maven.ide.eclipse.subclipse.SubclipseHandler"/>
+  </extension>
+  
+  <extension point="org.maven.ide.eclipse.scmHandlersUi">
+     <handlerUi type="svn" class="org.maven.ide.eclipse.subclipse.SubclipseHandlerUi"/>
+  </extension>
+  
+  <extension point="org.eclipse.core.runtime.adapters">
+     <factory adaptableType="org.tigris.subversion.subclipse.core.ISVNRemoteFolder"
+             class="org.maven.ide.eclipse.subclipse.SubclipseUrlAdapterFactory">
+        <adapter type="org.maven.ide.eclipse.scm.ScmUrl"/>
+     </factory>
+  </extension>
+
+</plugin>

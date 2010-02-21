@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.maven.ide.eclipse.subclipse.feature"
+      label="Maven SCM handler for Subclipse (Optional)"
+      version="0.10.1.qualifier"
+      provider-name="Sonatype, Inc."
+      plugin="org.maven.ide.eclipse">
+
+   <description url="http://m2eclipse.sonatype.org/">
+      Checkout Maven projects from SVN
+   </description>
+
+   <copyright url="http://www.sonatype.com/">
+      Copyright (c) 2008 Sonatype, Inc.
+   </copyright>
+
+   <license url="http://www.eclipse.org/legal/epl-v10.html">
+      All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License
+v1.0 which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+   </license>
+
+   <url>
+      <update label="Maven Integration" url="http://m2eclipse.sonatype.org/update/"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.team.core"/>
+      <import plugin="org.eclipse.team.ui"/>
+      <import plugin="org.tigris.subversion.subclipse.core"/>
+      <import plugin="org.tigris.subversion.subclipse.ui"/>
+      <import plugin="org.maven.ide.eclipse" version="0.10.0" match="equivalent"/>
+      <import plugin="org.maven.ide.eclipse.maven_embedder" version="0.10.0" match="equivalent"/>
+   </requires>
+
+   <plugin
+         id="org.maven.ide.eclipse.subclipse"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
