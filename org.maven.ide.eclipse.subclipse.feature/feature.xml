@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.maven.ide.eclipse.subclipse.feature"
-      label="Maven SCM handler for Subclipse (Optional)"
+      label="Maven SCM handler for Subclipse"
       version="0.12.0.qualifier"
       provider-name="Sonatype, Inc."
       plugin="org.maven.ide.eclipse">

@@ -37,14 +37,6 @@
     <module>org.maven.ide.eclipse.subclipse.feature</module>
   </modules>
 
-  <repositories>
-    <repository>
-      <id>m2e</id>
-      <layout>p2</layout>
-      <url>http://repository.sonatype.org/content/sites/forge-sites/m2e/${m2eclipse-core.site}</url>
-    </repository>
-	
-  </repositories>
   <build>
     <plugins>
       <plugin>
