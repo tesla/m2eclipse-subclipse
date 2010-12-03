@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+  Copyright (c) 2008 Sonatype, Inc.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.sonatype.forge</groupId>
+    <artifactId>forge-parent</artifactId>
+    <version>6</version>
+  </parent>
+
+  <groupId>org.maven.ide.eclipse.subclipse</groupId>
+  <artifactId>org.maven.ide.eclipse.subclipse.parent</artifactId>
+  <version>0.12.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>Maven Integration for Subclipse (Parent)</name>
+
+  <properties>
+    <tycho-version>0.10.0</tycho-version>
+    <m2eclipse-core.version>0.12.0.20101102-1505</m2eclipse-core.version>
+    <m2eclipse-core.site>0.12.0/S/${m2eclipse-core.version}</m2eclipse-core.site>
+    <target.platform>m2e-subclipse-e36</target.platform>       
+    <m2e.site-compressed>http://repository.sonatype.org/service/local/repositories/forge-sites/content-compressed/</m2e.site-compressed>
+  </properties>
+
+  <modules>
+    <module>org.maven.ide.eclipse.subclipse.target-platform</module>
+    <module>org.maven.ide.eclipse.subclipse</module>
+    <module>org.maven.ide.eclipse.subclipse.feature</module>
+  </modules>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.sonatype.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <extensions>true</extensions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.sonatype.tycho</groupId>
+        <artifactId>target-platform-configuration</artifactId>
+        <version>${tycho-version}</version>
+        <configuration>
+          <resolver>p2</resolver>
+		  <target>
+            <artifact>
+			  <groupId>org.maven.ide.eclipse.subclipse</groupId>
+			  <artifactId>org.maven.ide.eclipse.subclipse.target-platform</artifactId>
+              <version>${project.version}</version>
+              <classifier>${target.platform}</classifier>
+            </artifact>
+          </target>
+          <ignoreTychoRepositories>true</ignoreTychoRepositories>
+        </configuration>
+      </plugin>
+    </plugins>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.sonatype.tycho</groupId>
+          <artifactId>maven-osgi-test-plugin</artifactId>
+          <version>${tycho-version}</version>
+          <configuration>
+            <useUIHarness>true</useUIHarness>
+            <includes>
+              <include>**/*Test.java</include>
+            </includes>
+            <argLine>${tycho.test.jvmArgs}</argLine>
+            <!-- kill test JVM it tests take more than 20 minutes (1200 seconds) 
+              to finish -->
+            <forkedProcessTimeoutInSeconds>1200</forkedProcessTimeoutInSeconds>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>sun-jvm</id>
+      <activation>
+        <property>
+          <name>java.vendor.url</name>
+          <value>http://java.sun.com/</value>
+        </property>
+      </activation>
+      <properties>
+        <tycho.test.jvmArgs>-Xmx512m -XX:MaxPermSize=256m</tycho.test.jvmArgs>
+      </properties>
+    </profile>
+    <profile>
+      <id>osx</id>
+      <activation>
+        <property>
+          <name>java.vendor.url</name>
+          <value>http://www.apple.com/</value>
+        </property>
+      </activation>
+      <properties>
+        <tycho.test.jvmArgs>-Xmx512m -XX:MaxPermSize=256m -Dosgi.ws=cocoa -XstartOnFirstThread</tycho.test.jvmArgs>
+        <osgi.ws>cocoa</osgi.ws>
+      </properties>
+    </profile>
+    <profile>
+      <id>sign</id>
+      <activation>
+        <property><name>jarsigner.alias</name></property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jarsigner-plugin</artifactId>
+            <version>1.2</version>
+            <executions>
+              <execution>
+                <id>sign</id>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+</project>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.maven.ide.eclipse.subclipse.feature"
-      label="Maven SCM handler for Subclipse (Optional)"
-      version="0.10.1.qualifier"
+      label="Maven SCM handler for Subclipse"
+      version="0.12.0.qualifier"
       provider-name="Sonatype, Inc."
       plugin="org.maven.ide.eclipse">
 
@@ -33,8 +33,8 @@ http://www.eclipse.org/legal/epl-v10.html
       <import plugin="org.eclipse.team.ui"/>
       <import plugin="org.tigris.subversion.subclipse.core"/>
       <import plugin="org.tigris.subversion.subclipse.ui"/>
-      <import plugin="org.maven.ide.eclipse" version="0.10.0" match="equivalent"/>
-      <import plugin="org.maven.ide.eclipse.maven_embedder" version="0.10.0" match="equivalent"/>
+      <import plugin="org.maven.ide.eclipse" version="0.10.0" match="compatible"/>
+      <import plugin="org.maven.ide.eclipse.maven_embedder" version="0.10.0" match="compatible"/>
    </requires>
 
    <plugin
