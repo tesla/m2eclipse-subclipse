@@ -52,10 +52,10 @@
         <version>${tycho-version}</version>
         <configuration>
           <resolver>p2</resolver>
-		  <target>
+          <target>
             <artifact>
-			  <groupId>org.maven.ide.eclipse.subclipse</groupId>
-			  <artifactId>org.maven.ide.eclipse.subclipse.target-platform</artifactId>
+              <groupId>org.maven.ide.eclipse.subclipse</groupId>
+              <artifactId>org.maven.ide.eclipse.subclipse.target-platform</artifactId>
               <version>${project.version}</version>
               <classifier>${target.platform}</classifier>
             </artifact>
