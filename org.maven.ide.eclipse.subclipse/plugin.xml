@@ -22,6 +22,10 @@
              class="org.maven.ide.eclipse.subclipse.SubclipseUrlAdapterFactory">
         <adapter type="org.eclipse.m2e.core.scm.ScmUrl"/>
      </factory>
+     <factory adaptableType="org.tigris.subversion.subclipse.core.ISVNRepositoryLocation"
+             class="org.maven.ide.eclipse.subclipse.SubclipseUrlAdapterFactory">
+        <adapter type="org.eclipse.m2e.core.scm.ScmUrl"/>
+     </factory>
   </extension>
 
 </plugin>

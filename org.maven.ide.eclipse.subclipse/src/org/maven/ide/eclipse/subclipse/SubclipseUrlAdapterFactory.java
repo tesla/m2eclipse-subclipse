@@ -12,6 +12,7 @@ import org.eclipse.core.runtime.IAdapterFactory;
 import org.eclipse.m2e.core.scm.ScmUrl;
 
 import org.tigris.subversion.subclipse.core.ISVNRemoteFolder;
+import org.tigris.subversion.subclipse.core.ISVNRepositoryLocation;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
 
 /**
@@ -31,18 +32,26 @@ public class SubclipseUrlAdapterFactory implements IAdapterFactory {
       if(adaptable instanceof ISVNRemoteFolder) {
         SVNUrl svnUrl = ((ISVNRemoteFolder) adaptable).getUrl();
 
-        String scmUrl = SubclipseHandler.SCM_SVN_PREFIX + svnUrl.toString();
-        
-        SVNUrl parent = svnUrl.getParent();
-        String scmParentUrl = null;
-        if(parent!=null) {
-          scmParentUrl = SubclipseHandler.SCM_SVN_PREFIX + parent.toString();
-        }
-        
-        return new ScmUrl(scmUrl, scmParentUrl);
+        return adapt(svnUrl);
+      } else if(adaptable instanceof ISVNRepositoryLocation) {
+        SVNUrl svnUrl = ((ISVNRepositoryLocation) adaptable).getUrl();
+
+        return adapt(svnUrl);
       }
     }
     return null;
+  }
+
+  private ScmUrl adapt(SVNUrl svnUrl) {
+    String scmUrl = SubclipseHandler.SCM_SVN_PREFIX + svnUrl.toString();
+
+    SVNUrl parent = svnUrl.getParent();
+    String scmParentUrl = null;
+    if(parent != null) {
+      scmParentUrl = SubclipseHandler.SCM_SVN_PREFIX + parent.toString();
+    }
+
+    return new ScmUrl(scmUrl, scmParentUrl);
   }
 
 }
