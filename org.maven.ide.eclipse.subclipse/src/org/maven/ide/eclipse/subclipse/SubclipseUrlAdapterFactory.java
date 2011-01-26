@@ -9,26 +9,23 @@
 package org.maven.ide.eclipse.subclipse;
 
 import org.eclipse.core.runtime.IAdapterFactory;
+import org.eclipse.m2e.core.scm.ScmUrl;
 
 import org.tigris.subversion.subclipse.core.ISVNRemoteFolder;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
-
-import org.maven.ide.eclipse.scm.ScmUrl;
 
 /**
  * @author Eugene Kuleshov
  */
 public class SubclipseUrlAdapterFactory implements IAdapterFactory {
 
-  @SuppressWarnings("unchecked")
-  private static final Class[] ADAPTER_TYPES = new Class[] { ScmUrl.class };
+  private static final Class<?>[] ADAPTER_TYPES = new Class[] { ScmUrl.class };
   
-  @SuppressWarnings("unchecked")
-  public Class[] getAdapterList() {
+  public Class<?>[] getAdapterList() {
     return ADAPTER_TYPES;
   }
   
-  @SuppressWarnings("unchecked")
+  @SuppressWarnings("rawtypes")
   public Object getAdapter(Object adaptable, Class adapterType) {
     if(ScmUrl.class.equals(adapterType)) {
       if(adaptable instanceof ISVNRemoteFolder) {

@@ -12,6 +12,8 @@ import java.net.MalformedURLException;
 import java.text.ParseException;
 
 import org.eclipse.jface.window.Window;
+import org.eclipse.m2e.core.scm.ScmHandlerUi;
+import org.eclipse.m2e.core.scm.ScmUrl;
 import org.eclipse.swt.widgets.Shell;
 
 import org.tigris.subversion.subclipse.core.ISVNRemoteFolder;
@@ -21,9 +23,6 @@ import org.tigris.subversion.subclipse.ui.dialogs.ChooseUrlDialog;
 import org.tigris.subversion.subclipse.ui.dialogs.HistoryDialog;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
-
-import org.maven.ide.eclipse.scm.ScmHandlerUi;
-import org.maven.ide.eclipse.scm.ScmUrl;
 
 /**
  * An SCM handler UI for Subclipse team provider

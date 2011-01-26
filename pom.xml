@@ -18,15 +18,14 @@
 
   <groupId>org.maven.ide.eclipse.subclipse</groupId>
   <artifactId>org.maven.ide.eclipse.subclipse.parent</artifactId>
-  <version>0.12.1-SNAPSHOT</version>
+  <version>0.13.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Maven Integration for Subclipse (Parent)</name>
 
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <tycho-version>0.10.0</tycho-version>
-    <m2eclipse-core.version>0.12.0.20101102-1505</m2eclipse-core.version>
-    <m2eclipse-core.site>0.12.0/S/${m2eclipse-core.version}</m2eclipse-core.site>
     <target.platform>m2e-subclipse-e36</target.platform>       
     <m2e.site-compressed>http://repository.sonatype.org/service/local/repositories/forge-sites/content-compressed/</m2e.site-compressed>
   </properties>
@@ -77,9 +76,7 @@
               <include>**/*Test.java</include>
             </includes>
             <argLine>${tycho.test.jvmArgs}</argLine>
-            <!-- kill test JVM it tests take more than 20 minutes (1200 seconds) 
-              to finish -->
-            <forkedProcessTimeoutInSeconds>1200</forkedProcessTimeoutInSeconds>
+            <forkedProcessTimeoutInSeconds>600</forkedProcessTimeoutInSeconds>
           </configuration>
         </plugin>
       </plugins>

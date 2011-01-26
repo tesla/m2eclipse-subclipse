@@ -9,18 +9,18 @@
 <?eclipse version="3.2"?>
 <plugin>
 
-  <extension point="org.maven.ide.eclipse.scmHandlers">
+  <extension point="org.eclipse.m2e.core.scmHandlers">
      <handler type="svn" priority="10" class="org.maven.ide.eclipse.subclipse.SubclipseHandler"/>
   </extension>
   
-  <extension point="org.maven.ide.eclipse.scmHandlersUi">
+  <extension point="org.eclipse.m2e.core.scmHandlersUi">
      <handlerUi type="svn" class="org.maven.ide.eclipse.subclipse.SubclipseHandlerUi"/>
   </extension>
   
   <extension point="org.eclipse.core.runtime.adapters">
      <factory adaptableType="org.tigris.subversion.subclipse.core.ISVNRemoteFolder"
              class="org.maven.ide.eclipse.subclipse.SubclipseUrlAdapterFactory">
-        <adapter type="org.maven.ide.eclipse.scm.ScmUrl"/>
+        <adapter type="org.eclipse.m2e.core.scm.ScmUrl"/>
      </factory>
   </extension>
 

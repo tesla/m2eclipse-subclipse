@@ -10,9 +10,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-	<groupId>org.maven.ide.eclipse.subclipse</groupId>
-	<artifactId>org.maven.ide.eclipse.subclipse.parent</artifactId>
-	<version>0.12.1-SNAPSHOT</version>
+    <groupId>org.maven.ide.eclipse.subclipse</groupId>
+    <artifactId>org.maven.ide.eclipse.subclipse.parent</artifactId>
+    <version>0.13.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>org.maven.ide.eclipse.subclipse.feature</artifactId>
@@ -25,7 +25,7 @@
       <plugin>
         <groupId>org.sonatype.tycho</groupId>
         <artifactId>maven-osgi-packaging-plugin</artifactId>
-		<version>${tycho-version}</version>
+        <version>${tycho-version}</version>
         <configuration>
           <deployableFeature>true</deployableFeature>
         </configuration>
@@ -76,7 +76,6 @@
   <profiles>
     <profile>
       <id>publish-site</id>
-
       <build>
         <plugins>
           <plugin>
@@ -92,7 +91,6 @@
                 </goals>
                 <configuration>
                   <file>${project.build.directory}/${project.artifactId}-${project.version}-site.zip</file>
-
                   <serverId>forge-releases</serverId>
                   <repositoryUrl>${m2e.site-compressed}</repositoryUrl>
                   <repositoryPath>m2eclipse-subclipse/${unqualifiedVersion}/N/${unqualifiedVersion}.${buildQualifier}</repositoryPath>

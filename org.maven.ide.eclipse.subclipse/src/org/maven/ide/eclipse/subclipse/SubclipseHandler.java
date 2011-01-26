@@ -17,6 +17,9 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
+import org.eclipse.m2e.core.core.IMavenConstants;
+import org.eclipse.m2e.core.project.MavenProjectScmInfo;
+import org.eclipse.m2e.core.scm.ScmHandler;
 
 import org.tigris.subversion.subclipse.core.ISVNRemoteFolder;
 import org.tigris.subversion.subclipse.core.ISVNRepositoryLocation;
@@ -27,10 +30,6 @@ import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.SVNClientException;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
-
-import org.maven.ide.eclipse.core.IMavenConstants;
-import org.maven.ide.eclipse.project.MavenProjectScmInfo;
-import org.maven.ide.eclipse.scm.ScmHandler;
 
 
 /**
