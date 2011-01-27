@@ -10,15 +10,15 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.maven.ide.eclipse.subclipse</groupId>
-    <artifactId>org.maven.ide.eclipse.subclipse.parent</artifactId>
+    <groupId>org.sonatype.m2e.subclipse</groupId>
+    <artifactId>org.sonatype.m2e.subclipse.parent</artifactId>
     <version>0.13.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>org.maven.ide.eclipse.subclipse.feature</artifactId>
+  <artifactId>org.sonatype.m2e.subclipse.feature</artifactId>
   <packaging>eclipse-feature</packaging>
 
-  <name>Maven SCM handler for Subclipse</name>
+  <name>Maven SCM Handler for Subclipse Feature</name>
 
   <build>
     <plugins>

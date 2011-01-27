@@ -6,7 +6,7 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *******************************************************************************/
 
-package org.maven.ide.eclipse.subclipse;
+package org.sonatype.m2e.subclipse.internal;
 
 import java.util.Properties;
 

@@ -6,7 +6,7 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *******************************************************************************/
 
-package org.maven.ide.eclipse.subclipse;
+package org.sonatype.m2e.subclipse;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
@@ -19,7 +19,7 @@ import org.osgi.framework.BundleContext;
 public class MavenSubclipsePlugin extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.maven.ide.eclipse.subclipse";
+	public static final String PLUGIN_ID = "org.sonatype.m2e.subclipse";
 
 	// The shared instance
 	private static MavenSubclipsePlugin plugin;

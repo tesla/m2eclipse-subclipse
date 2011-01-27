@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.maven.ide.eclipse.subclipse.feature"
+      id="org.sonatype.m2e.subclipse.feature"
       label="Maven SCM handler for Subclipse"
       version="0.13.0.qualifier"
       provider-name="Sonatype, Inc."
@@ -38,7 +38,7 @@ http://www.eclipse.org/legal/epl-v10.html
    </requires>
 
    <plugin
-         id="org.maven.ide.eclipse.subclipse"
+         id="org.sonatype.m2e.subclipse"
          download-size="0"
          install-size="0"
          version="0.0.0"

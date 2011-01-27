@@ -10,20 +10,20 @@
 <plugin>
 
   <extension point="org.eclipse.m2e.core.scmHandlers">
-     <handler type="svn" priority="10" class="org.maven.ide.eclipse.subclipse.SubclipseHandler"/>
+     <handler type="svn" priority="10" class="org.sonatype.m2e.subclipse.internal.SubclipseHandler"/>
   </extension>
   
   <extension point="org.eclipse.m2e.core.scmHandlersUi">
-     <handlerUi type="svn" class="org.maven.ide.eclipse.subclipse.SubclipseHandlerUi"/>
+     <handlerUi type="svn" class="org.sonatype.m2e.subclipse.internal.SubclipseHandlerUi"/>
   </extension>
   
   <extension point="org.eclipse.core.runtime.adapters">
      <factory adaptableType="org.tigris.subversion.subclipse.core.ISVNRemoteFolder"
-             class="org.maven.ide.eclipse.subclipse.SubclipseUrlAdapterFactory">
+             class="org.sonatype.m2e.subclipse.internal.SubclipseUrlAdapterFactory">
         <adapter type="org.eclipse.m2e.core.scm.ScmUrl"/>
      </factory>
      <factory adaptableType="org.tigris.subversion.subclipse.core.ISVNRepositoryLocation"
-             class="org.maven.ide.eclipse.subclipse.SubclipseUrlAdapterFactory">
+             class="org.sonatype.m2e.subclipse.internal.SubclipseUrlAdapterFactory">
         <adapter type="org.eclipse.m2e.core.scm.ScmUrl"/>
      </factory>
   </extension>

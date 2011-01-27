@@ -16,12 +16,12 @@
     <version>6</version>
   </parent>
 
-  <groupId>org.maven.ide.eclipse.subclipse</groupId>
-  <artifactId>org.maven.ide.eclipse.subclipse.parent</artifactId>
+  <groupId>org.sonatype.m2e.subclipse</groupId>
+  <artifactId>org.sonatype.m2e.subclipse.parent</artifactId>
   <version>0.13.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>Maven Integration for Subclipse (Parent)</name>
+  <name>Maven SCM Handler for Subclipse Parent</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,9 +31,9 @@
   </properties>
 
   <modules>
-    <module>org.maven.ide.eclipse.subclipse.target-platform</module>
-    <module>org.maven.ide.eclipse.subclipse</module>
-    <module>org.maven.ide.eclipse.subclipse.feature</module>
+    <module>org.sonatype.m2e.subclipse.target-platform</module>
+    <module>org.sonatype.m2e.subclipse</module>
+    <module>org.sonatype.m2e.subclipse.feature</module>
   </modules>
 
   <build>
@@ -53,8 +53,8 @@
           <resolver>p2</resolver>
           <target>
             <artifact>
-              <groupId>org.maven.ide.eclipse.subclipse</groupId>
-              <artifactId>org.maven.ide.eclipse.subclipse.target-platform</artifactId>
+              <groupId>org.sonatype.m2e.subclipse</groupId>
+              <artifactId>org.sonatype.m2e.subclipse.target-platform</artifactId>
               <version>${project.version}</version>
               <classifier>${target.platform}</classifier>
             </artifact>

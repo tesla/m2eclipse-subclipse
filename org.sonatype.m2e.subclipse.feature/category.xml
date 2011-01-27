@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.maven.ide.eclipse.subclipse.feature_0.13.0.qualifier.jar" id="org.maven.ide.eclipse.subclipse.feature" version="0.13.0.qualifier">
+   <feature url="features/org.sonatype.m2e.subclipse.feature_0.13.0.qualifier.jar" id="org.sonatype.m2e.subclipse.feature" version="0.13.0.qualifier">
       <category name="m2eclipse-subclipse"/>
    </feature>
    <category-def name="m2eclipse-subclipse" label="Maven Integration for Subclipse"/>

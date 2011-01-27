@@ -6,12 +6,14 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *******************************************************************************/
 
-package org.maven.ide.eclipse.subclipse;
+package org.sonatype.m2e.subclipse.internal;
 
 import java.io.File;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.text.ParseException;
+
+import org.sonatype.m2e.subclipse.MavenSubclipsePlugin;
 
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
