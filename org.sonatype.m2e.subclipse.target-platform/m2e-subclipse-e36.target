@@ -6,26 +6,30 @@
 
 <location includeAllPlatforms="false" includeMode="planner" type="InstallableUnit">
 <unit id="org.eclipse.sdk.ide" version="3.6.1.M20100909-0800"/>
+<unit id="org.eclipse.emf.common.feature.group" version="2.6.0.v20100914-1218"/>
+<unit id="org.eclipse.emf.ecore.edit.feature.group" version="2.6.0.v20100914-1218"/>
+<unit id="org.eclipse.emf.edit.ui.feature.group" version="2.6.0.v20100914-1218"/>
 <unit id="org.eclipse.wst.common.emf" version="1.2.1.v201008260500"/>
 <unit id="org.eclipse.wst.sse.core" version="1.1.502.v201008311901"/>
 <unit id="org.eclipse.wst.xml.core" version="1.1.502.v201009010342"/>
+<unit id="org.eclipse.wst.sse.ui" version="1.2.2.v201008232126"/>
 <unit id="org.eclipse.wst.xsd.core" version="1.1.502.v201008201521"/>
-<unit id="org.eclipse.emf.ecore.edit.feature.group" version="2.6.0.v20100914-1218"/>
+<unit id="org.eclipse.wst.web_ui.feature.feature.group" version="3.2.2.v201008100100-7O7CFbKEMf84nUlEJyX7-SPQjhYZ"/>
+<unit id="org.eclipse.equinox.p2.sdk.feature.group" version="3.6.0.v20100503-9I7VGAeG8tz-BY6jz0w2HLRYr"/>
 <unit id="org.slf4j.api" version="1.5.11.v20100519-1910"/>
 <repository location="http://download.eclipse.org/releases/helios"/>
 </location>
 
 <location includeAllPlatforms="false" includeMode="planner" type="InstallableUnit">
-<unit id="org.eclipse.m2e.core" version="0.13.0.201101251319"/>
-<unit id="org.eclipse.m2e.maven.runtime" version="0.13.0.201101251319"/>
+<unit id="org.eclipse.m2e.feature.feature.group" version="0.13.0.201101251319"/>
 <unit id="org.eclipse.m2e.tests.common" version="0.13.0.201101251319"/>
 <repository location="http://repository.sonatype.org/content/sites/forge-sites/m2e/0.13.0/N/0.13.0.201101251319"/>
 </location>
 
 <location includeAllPlatforms="false" includeMode="planner" type="InstallableUnit">
-<unit id="org.tigris.subversion.subclipse.feature.group" version="1.6.16"/>
+<unit id="org.tigris.subversion.subclipse.feature.group" version="1.6.17"/>
 <unit id="org.tigris.subversion.clientadapter.feature.feature.group" version="1.6.12"/>
-<unit id="org.tigris.subversion.clientadapter.svnkit.feature.feature.group" version="1.6.12"/>
+<unit id="org.tigris.subversion.clientadapter.svnkit.feature.feature.group" version="1.6.15"/>
 <repository location="http://subclipse.tigris.org/update_1.6.x"/>
 </location>
 
