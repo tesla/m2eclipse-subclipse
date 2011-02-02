@@ -36,9 +36,9 @@
             <configuration>
               <artifacts>
                 <artifact>
-                  <file>m2e-subclipse-e36.target</file>
+                  <file>e36.target</file>
                   <type>target</type>
-                  <classifier>m2e-subclipse-e36</classifier>
+                  <classifier>e36</classifier>
                 </artifact>
               </artifacts>
             </configuration>
