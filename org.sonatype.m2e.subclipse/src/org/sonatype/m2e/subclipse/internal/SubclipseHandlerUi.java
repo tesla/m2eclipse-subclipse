@@ -12,8 +12,8 @@ import java.net.MalformedURLException;
 import java.text.ParseException;
 
 import org.eclipse.jface.window.Window;
-import org.eclipse.m2e.core.scm.ScmHandlerUi;
-import org.eclipse.m2e.core.scm.ScmUrl;
+import org.eclipse.m2e.scm.ScmUrl;
+import org.eclipse.m2e.scm.spi.ScmHandlerUi;
 import org.eclipse.swt.widgets.Shell;
 
 import org.tigris.subversion.subclipse.core.ISVNRemoteFolder;
@@ -29,6 +29,7 @@ import org.tigris.subversion.svnclientadapter.SVNUrl;
  * 
  * @author Eugene Kuleshov
  */
+@SuppressWarnings("restriction")
 public class SubclipseHandlerUi extends ScmHandlerUi {
 
   public boolean canSelectUrl() {

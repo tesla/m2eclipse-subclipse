@@ -20,8 +20,8 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.m2e.core.core.IMavenConstants;
-import org.eclipse.m2e.core.project.MavenProjectScmInfo;
-import org.eclipse.m2e.core.scm.ScmHandler;
+import org.eclipse.m2e.scm.MavenProjectScmInfo;
+import org.eclipse.m2e.scm.spi.ScmHandler;
 
 import org.tigris.subversion.subclipse.core.ISVNRemoteFolder;
 import org.tigris.subversion.subclipse.core.ISVNRepositoryLocation;
@@ -39,6 +39,7 @@ import org.tigris.subversion.svnclientadapter.SVNUrl;
  * 
  * @author Eugene Kuleshov
  */
+@SuppressWarnings("restriction")
 public class SubclipseHandler extends ScmHandler {
 
   public static final String SCM_SVN_PREFIX = "scm:svn:";
@@ -82,8 +83,8 @@ public class SubclipseHandler extends ScmHandler {
     }
   }
 
-  public void checkoutProject(MavenProjectScmInfo info, //
-      File dest, IProgressMonitor monitor) throws CoreException, InterruptedException {
+  public void checkoutProject(MavenProjectScmInfo info, File dest, IProgressMonitor monitor) throws CoreException,
+      InterruptedException {
     ISVNRemoteFolder folder = getRemoteFolder(info);
     
     ISVNClientAdapter svnClient = folder.getRepository().getSVNClient();

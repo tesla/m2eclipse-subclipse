@@ -9,7 +9,7 @@
 package org.sonatype.m2e.subclipse.internal;
 
 import org.eclipse.core.runtime.IAdapterFactory;
-import org.eclipse.m2e.core.scm.ScmUrl;
+import org.eclipse.m2e.scm.ScmUrl;
 
 import org.tigris.subversion.subclipse.core.ISVNRemoteFolder;
 import org.tigris.subversion.subclipse.core.ISVNRepositoryLocation;
@@ -18,6 +18,7 @@ import org.tigris.subversion.svnclientadapter.SVNUrl;
 /**
  * @author Eugene Kuleshov
  */
+@SuppressWarnings("restriction")
 public class SubclipseUrlAdapterFactory implements IAdapterFactory {
 
   private static final Class<?>[] ADAPTER_TYPES = new Class[] { ScmUrl.class };
