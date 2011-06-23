@@ -21,9 +21,9 @@
 </location>
 
 <location includeAllPlatforms="false" includeMode="planner" type="InstallableUnit">
-<unit id="org.eclipse.m2e.feature.feature.group" version="0.13.0.201102281605"/>
-<unit id="org.eclipse.m2e.tests.common" version="0.13.0.201102281605"/>
-<repository location="http://repository.sonatype.org/content/sites/forge-sites/m2e/0.13.0/N/0.13.0.201102281605"/>
+<unit id="org.eclipse.m2e.feature.feature.group" version="1.0.0.20110607-2117"/>
+<unit id="org.eclipse.m2e.tests.common" version="1.0.0.20110607-2117"/>
+<repository location="http://download.eclipse.org/technology/m2e/releases/1.0"/>
 </location>
 
 <location includeAllPlatforms="false" includeMode="planner" type="InstallableUnit">
