@@ -19,7 +19,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
-import org.eclipse.m2e.core.core.IMavenConstants;
+import org.eclipse.m2e.core.internal.IMavenConstants;
 import org.eclipse.m2e.scm.MavenProjectScmInfo;
 import org.eclipse.m2e.scm.spi.ScmHandler;
 
@@ -36,7 +36,7 @@ import org.tigris.subversion.svnclientadapter.SVNUrl;
 
 /**
  * An SCM handler based on Subclipse Team provider
- * 
+ *
  * @author Eugene Kuleshov
  */
 @SuppressWarnings("restriction")
@@ -67,7 +67,7 @@ public class SubclipseHandler extends ScmHandler {
       SVNUrl pomUrl = folderUrl.appendPath("/" + IMavenConstants.POM_FILE_NAME);
 
       return client.getContent(pomUrl, SVNRevision.getRevision(revision));
-      
+
     } catch(SVNException ex) {
       throw new CoreException(new Status(IStatus.ERROR, IMavenConstants.PLUGIN_ID, 0, ex.getMessage(), ex));
 
@@ -86,22 +86,22 @@ public class SubclipseHandler extends ScmHandler {
   public void checkoutProject(MavenProjectScmInfo info, File dest, IProgressMonitor monitor) throws CoreException,
       InterruptedException {
     ISVNRemoteFolder folder = getRemoteFolder(info);
-    
+
     ISVNClientAdapter svnClient = folder.getRepository().getSVNClient();
-    
+
     try {
       OperationManager.getInstance().beginOperation(svnClient, new OperationProgressNotifyListener(monitor));
-      
+
       svnClient.checkout(folder.getUrl(), dest, //
           SVNRevision.getRevision(info.getRevision()), true);
-      
+
 //      RepositoryProvider.map(project, SVNProviderPlugin.getTypeId());
 //      RepositoryProvider.getProvider(project, SVNProviderPlugin.getTypeId());
-      
+
     } catch(ParseException ex) {
       throw new CoreException(new Status(IStatus.ERROR, IMavenConstants.PLUGIN_ID, 0, //
           "Invalid revision " + info.getRevision(), ex));
-    
+
     } catch (SVNClientException e) {
       String msg = null;
       Throwable cause = e.getCause();
@@ -114,14 +114,14 @@ public class SubclipseHandler extends ScmHandler {
       if(msg==null) {
         msg = e.toString();
       }
-      
+
       throw new SVNException("Checkout error; " + msg);
-      
+
     } finally {
       OperationManager.getInstance().endOperation();
-    
+
     }
-    
+
 //    CheckoutAsProjectOperation operation = new CheckoutAsProjectOperation(null, //
 //        new ISVNRemoteFolder[] {folder}, //
 //        new IProject[] {project}, locationPath);
@@ -131,14 +131,14 @@ public class SubclipseHandler extends ScmHandler {
 //
 //    } catch(ParseException ex) {
 //      throw new CoreException(new Status(IStatus.ERROR, MavenPlugin.PLUGIN_ID, 0, "Invalid revision " + info.getRevision(), ex));
-//      
+//
 //    } catch(InvocationTargetException ex) {
 //      Throwable t = ex.getTargetException()==null ? ex : ex.getTargetException();
 //      if(t instanceof CoreException) {
 //        throw (CoreException) t;
 //      }
 //      throw new CoreException(new Status(IStatus.ERROR, MavenPlugin.PLUGIN_ID, 0, "Invalid revision " + info.getRevision(), t));
-//      
+//
 //    }
   }
 
