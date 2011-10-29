@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target includeMode="feature" name="m2e-subclipse-e36">
+<target includeMode="feature" name="m2e-subclipse-e36" sequenceNumber="1">
 <locations>
-
-<location includeAllPlatforms="false" includeMode="planner" type="InstallableUnit">
+<location includeAllPlatforms="false" includeMode="planner" includeSource="false" type="InstallableUnit">
 <unit id="org.eclipse.sdk.ide" version="3.6.2.M20110210-1200"/>
 <unit id="org.eclipse.emf.common.feature.group" version="2.6.0.v20100914-1218"/>
 <unit id="org.eclipse.emf.ecore.edit.feature.group" version="2.6.0.v20100914-1218"/>
@@ -18,25 +17,24 @@
 <unit id="org.eclipse.equinox.p2.sdk.feature.group" version="3.6.2.R36x_v20110120-9I7VGEAG438GhnfSLuLz0FXP9NYJ"/>
 <repository location="http://download.eclipse.org/releases/helios"/>
 </location>
-
-<location includeAllPlatforms="false" includeMode="planner" type="InstallableUnit">
+<location includeAllPlatforms="false" includeMode="planner" includeSource="false" type="InstallableUnit">
 <unit id="org.slf4j.api" version="1.6.1.v20100831-0715"/>
 <unit id="ch.qos.logback.core" version="0.9.27.v20110224-1110"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20110523182458/repository"/>
 </location>
-
-<location includeAllPlatforms="false" includeMode="planner" type="InstallableUnit">
+<location includeAllPlatforms="false" includeMode="planner" includeSource="false" type="InstallableUnit">
 <unit id="org.eclipse.m2e.feature.feature.group" version="1.0.0.20110607-2117"/>
 <unit id="org.eclipse.m2e.tests.common" version="1.0.0.20110607-2117"/>
 <repository location="http://download.eclipse.org/technology/m2e/releases/1.0"/>
 </location>
-
-<location includeAllPlatforms="false" includeMode="planner" type="InstallableUnit">
-<unit id="org.tigris.subversion.subclipse.feature.group" version="1.6.18"/>
-<unit id="org.tigris.subversion.clientadapter.feature.feature.group" version="1.6.12"/>
-<unit id="org.tigris.subversion.clientadapter.svnkit.feature.feature.group" version="1.6.15"/>
-<repository location="http://subclipse.tigris.org/update_1.6.x"/>
+<location includeAllPlatforms="false" includeMode="planner" includeSource="false" type="InstallableUnit">
+<unit id="com.collabnet.subversion.merge.feature.feature.group" version="3.0.4"/>
+<unit id="org.tigris.subversion.subclipse.feature.group" version="1.8.2"/>
+<unit id="org.tigris.subversion.subclipse.mylyn.feature.group" version="3.0.0"/>
+<unit id="org.tigris.subversion.clientadapter.feature.feature.group" version="1.8.0"/>
+<unit id="org.tigris.subversion.clientadapter.javahl.feature.feature.group" version="1.7.1"/>
+<unit id="org.tigris.subversion.subclipse.graph.feature.feature.group" version="1.1.1"/>
+<repository location="http://subclipse.tigris.org/update_1.8.x"/>
 </location>
-
 </locations>
 </target>
