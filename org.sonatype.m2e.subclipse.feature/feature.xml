@@ -2,7 +2,7 @@
 <feature
       id="org.sonatype.m2e.subclipse.feature"
       label="Maven SCM handler for Subclipse"
-      version="0.13.0.qualifier"
+      version="0.13.1.qualifier"
       provider-name="Sonatype, Inc."
       plugin="org.sonatype.m2e.subclipse">
 
