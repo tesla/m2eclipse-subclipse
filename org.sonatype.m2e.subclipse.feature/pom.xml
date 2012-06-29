@@ -46,7 +46,6 @@
         <configuration>
           <metadataRepositoryName>Maven Integration for Subclipse</metadataRepositoryName>
           <artifactRepositoryName>Maven Integration for Subclipse</artifactRepositoryName>
-          <compressRepository>false</compressRepository>
         </configuration>
       </plugin>
 
@@ -91,7 +90,7 @@
                 </goals>
                 <configuration>
                   <file>${project.build.directory}/${project.artifactId}-${project.version}-site.zip</file>
-                  <serverId>forge-releases</serverId>
+                  <serverId>m2e.extras</serverId>
                   <repositoryUrl>${m2e.site-compressed}</repositoryUrl>
                   <repositoryPath>m2eclipse-subclipse/${unqualifiedVersion}/N/${unqualifiedVersion}.${buildQualifier}</repositoryPath>
                 </configuration>

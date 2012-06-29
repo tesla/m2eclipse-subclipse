@@ -11,9 +11,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.sonatype.forge</groupId>
-    <artifactId>forge-parent</artifactId>
-    <version>6</version>
+    <groupId>io.tesla</groupId>
+    <artifactId>tesla</artifactId>
+    <version>4</version>
   </parent>
 
   <groupId>org.sonatype.m2e.subclipse</groupId>
@@ -24,14 +24,35 @@
   <name>Maven SCM Handler for Subclipse Parent</name>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <tycho-version>0.12.0</tycho-version>
-    <target.platform>e36</target.platform>       
-    <m2e.site-compressed>http://repository.sonatype.org/service/local/repositories/forge-sites/content-compressed/</m2e.site-compressed>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
+    <tycho-version>0.15.0</tycho-version>
+    <m2e.site-compressed>http://repository.tesla.io:8081/nexus/service/local/repositories/m2e.extras/content-compressed/</m2e.site-compressed>
   </properties>
 
+  <repositories>
+    <repository>
+      <id>juno</id>
+      <url>http://download.eclipse.org/releases/juno</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
+      <id>orbit</id>
+      <url>http://download.eclipse.org/tools/orbit/downloads/drops/R20120526062928/repository/</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
+      <id>eclipse-commons</id>
+      <url>http://repository.sonatype.org/content/sites/forge-sites/eclipse-commons/1.1.7/N/1.1.7.201105091728</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
+      <id>subclipse</id>
+      <url>http://subclipse.tigris.org/update_1.8.x</url>
+      <layout>p2</layout>
+    </repository>
+  </repositories>
+  
   <modules>
-    <module>org.sonatype.m2e.subclipse.target-platform</module>
     <module>org.sonatype.m2e.subclipse</module>
     <module>org.sonatype.m2e.subclipse.feature</module>
   </modules>
@@ -51,14 +72,6 @@
         <version>${tycho-version}</version>
         <configuration>
           <resolver>p2</resolver>
-          <target>
-            <artifact>
-              <groupId>org.sonatype.m2e.subclipse</groupId>
-              <artifactId>org.sonatype.m2e.subclipse.target-platform</artifactId>
-              <version>${project.version}</version>
-              <classifier>${target.platform}</classifier>
-            </artifact>
-          </target>
           <ignoreTychoRepositories>true</ignoreTychoRepositories>
         </configuration>
       </plugin>
