@@ -1,0 +1,22 @@
+<catalog>
+  <catalogItems>    
+    <catalogItem>
+      <categoryId>org.eclipse.m2e.discovery.category.scm</categoryId>
+      <description>Maven SCM Handler for Subclipse</description>
+      <groupId>extras</groupId>
+      <id>org.eclipse.m2e.discovery.lifecyclemapping.m2e-subclipse</id>
+      <kind>extras</kind>
+      <license>EPL</license>
+      <name>m2e-subclipse</name>
+      <provider>Sonatype, Inc.</provider>
+      <p2>
+        <repositoryUrl>https://repository.sonatype.org/content/sites/forge-sites/m2eclipse-subclipse/0.13.0/N/0.13.0.201107071330/</repositoryUrl>
+        <iuId>org.sonatype.m2e.subclipse.feature.feature.group</iuId>
+      </p2>
+      <overview>
+        <summary>Maven SCM Handler for Subclipse</summary>
+        <url>https://github.com/sonatype/m2eclipse-subclipse</url>
+      </overview>
+    </catalogItem>
+  </catalogItems>
+</catalog>

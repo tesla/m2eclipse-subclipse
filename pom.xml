@@ -11,9 +11,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>io.tesla</groupId>
-    <artifactId>tesla</artifactId>
-    <version>4</version>
+    <groupId>io.tesla.tycho</groupId>
+    <artifactId>tycho-support</artifactId>
+    <version>0.0.4-SNAPSHOT</version>
   </parent>
 
   <groupId>org.sonatype.m2e.subclipse</groupId>
@@ -24,22 +24,11 @@
   <name>Maven SCM Handler for Subclipse Parent</name>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
-    <tycho-version>0.15.0</tycho-version>
-    <m2e.site-compressed>http://repository.tesla.io:8081/nexus/service/local/repositories/m2e.extras/content-compressed/</m2e.site-compressed>
-  </properties>
+    <repositoryPathId>m2eclipse-subclipse</repositoryPathId>
+    <p2MetadataName>Maven SCM Handler for Subclipse</p2MetadataName>
+  </properties>  
 
   <repositories>
-    <repository>
-      <id>juno</id>
-      <url>http://download.eclipse.org/releases/juno</url>
-      <layout>p2</layout>
-    </repository>
-    <repository>
-      <id>orbit</id>
-      <url>http://download.eclipse.org/tools/orbit/downloads/drops/R20120526062928/repository/</url>
-      <layout>p2</layout>
-    </repository>
     <repository>
       <id>eclipse-commons</id>
       <url>http://repository.sonatype.org/content/sites/forge-sites/eclipse-commons/1.1.7/N/1.1.7.201105091728</url>
@@ -57,98 +46,4 @@
     <module>org.sonatype.m2e.subclipse.feature</module>
   </modules>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.eclipse.tycho</groupId>
-        <artifactId>tycho-maven-plugin</artifactId>
-        <version>${tycho-version}</version>
-        <extensions>true</extensions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.eclipse.tycho</groupId>
-        <artifactId>target-platform-configuration</artifactId>
-        <version>${tycho-version}</version>
-        <configuration>
-          <resolver>p2</resolver>
-          <ignoreTychoRepositories>true</ignoreTychoRepositories>
-        </configuration>
-      </plugin>
-    </plugins>
-
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.eclipse.tycho</groupId>
-          <artifactId>tycho-surefire-plugin</artifactId>
-          <version>${tycho-version}</version>
-          <configuration>
-            <useUIHarness>true</useUIHarness>
-            <includes>
-              <include>**/*Test.java</include>
-            </includes>
-            <argLine>${tycho.test.jvmArgs}</argLine>
-            <forkedProcessTimeoutInSeconds>600</forkedProcessTimeoutInSeconds>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>2.4.3</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
-
-  <profiles>
-    <profile>
-      <id>sun-jvm</id>
-      <activation>
-        <property>
-          <name>java.vendor.url</name>
-          <value>http://java.sun.com/</value>
-        </property>
-      </activation>
-      <properties>
-        <tycho.test.jvmArgs>-Xmx512m -XX:MaxPermSize=256m</tycho.test.jvmArgs>
-      </properties>
-    </profile>
-    <profile>
-      <id>osx</id>
-      <activation>
-        <property>
-          <name>java.vendor.url</name>
-          <value>http://www.apple.com/</value>
-        </property>
-      </activation>
-      <properties>
-        <tycho.test.jvmArgs>-Xmx512m -XX:MaxPermSize=256m -Dosgi.ws=cocoa -XstartOnFirstThread</tycho.test.jvmArgs>
-        <osgi.ws>cocoa</osgi.ws>
-      </properties>
-    </profile>
-    <profile>
-      <id>sign</id>
-      <activation>
-        <property><name>jarsigner.alias</name></property>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jarsigner-plugin</artifactId>
-            <version>1.2</version>
-            <executions>
-              <execution>
-                <id>sign</id>
-                <goals>
-                  <goal>sign</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
 </project>
