@@ -36,7 +36,7 @@
     </repository>
     <repository>
       <id>subclipse</id>
-      <url>http://subclipse.tigris.org/update_1.8.x</url>
+      <url>http://subclipse.tigris.org/update_1.10.x</url>
       <layout>p2</layout>
     </repository>
   </repositories>
