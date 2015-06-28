@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product uid="org.sonatype.m2e.subclipse.updatesite" version="0.13.0" useFeatures="false" includeLaunchers="false">
+
+   <configIni use="">
+   </configIni>
+
+   <windowImages/>
+
+
+   <plugins>
+      <plugin id="org.sonatype.m2e.subclipse"/>
+   </plugins>
+
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
+
+</product>

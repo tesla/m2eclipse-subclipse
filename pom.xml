@@ -44,6 +44,7 @@
   <modules>
     <module>org.sonatype.m2e.subclipse</module>
     <module>org.sonatype.m2e.subclipse.feature</module>
+    <module>org.sonatype.m2e.subclipse.updatesite</module>
   </modules>
 
 </project>
