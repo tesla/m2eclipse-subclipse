@@ -9,5 +9,8 @@ Before you attempt to install the Maven SCM Handler for Subclipse you must add o
 http://subclipse.tigris.org/update_1.8.x (Subversion 1.7.x client features and working copy format)
 http://subclipse.tigris.org/update_1.10.x (Subversion 1.8.x client features and working copy format)
 
+## Update Site
+https://github.com/tesla/m2eclipse-subclipse/releases/latest
+
 [1]: http://subclipse.tigris.org/
 [2]: http://eclipse.org/m2e/
