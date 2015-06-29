@@ -18,16 +18,26 @@
 
   <groupId>org.sonatype.m2e.subclipse</groupId>
   <artifactId>org.sonatype.m2e.subclipse.parent</artifactId>
-  <version>0.13.0-SNAPSHOT</version>
+  <version>0.13.0</version>
   <packaging>pom</packaging>
 
   <name>Maven SCM Handler for Subclipse Parent</name>
 
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <repositoryPathId>m2eclipse-subclipse</repositoryPathId>
     <p2MetadataName>Maven SCM Handler for Subclipse</p2MetadataName>
   </properties>  
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-versions-plugin</artifactId>
+        <version>${tychoVersion}</version>
+      </plugin>
+    </plugins>
+  </build>
   <repositories>
     <repository>
       <id>eclipse-commons</id>
