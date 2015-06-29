@@ -27,7 +27,7 @@ public class SubclipseUrlAdapterFactory implements IAdapterFactory {
     return ADAPTER_TYPES;
   }
   
-  @SuppressWarnings("rawtypes")
+  @SuppressWarnings({ "unchecked", "rawtypes" })
   public Object getAdapter(Object adaptable, Class adapterType) {
     if(ScmUrl.class.equals(adapterType)) {
       if(adaptable instanceof ISVNRemoteFolder) {

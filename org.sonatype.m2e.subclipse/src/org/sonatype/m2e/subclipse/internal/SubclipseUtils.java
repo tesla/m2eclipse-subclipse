@@ -22,6 +22,10 @@ import org.tigris.subversion.subclipse.core.repo.SVNRepositories;
  */
 public class SubclipseUtils {
 
+  private SubclipseUtils() {
+    // empty private default constructor for util class...
+  }
+  
   public static ISVNRepositoryLocation getRepositoryLocation(String url) {
     SVNProviderPlugin provider = SVNProviderPlugin.getPlugin();
     SVNRepositories repositories = provider.getRepositories();

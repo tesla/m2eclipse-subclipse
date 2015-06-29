@@ -11,27 +11,37 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>io.tesla.tycho</groupId>
+    <groupId>io.takari.tycho</groupId>
     <artifactId>tycho-support</artifactId>
-    <version>0.0.6</version>
+    <version>1.1.0-SNAPSHOT</version>
   </parent>
 
   <groupId>org.sonatype.m2e.subclipse</groupId>
   <artifactId>org.sonatype.m2e.subclipse.parent</artifactId>
-  <version>0.13.0-SNAPSHOT</version>
+  <version>0.14.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Maven SCM Handler for Subclipse Parent</name>
 
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <repositoryPathId>m2eclipse-subclipse</repositoryPathId>
     <p2MetadataName>Maven SCM Handler for Subclipse</p2MetadataName>
   </properties>  
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-versions-plugin</artifactId>
+        <version>${tychoVersion}</version>
+      </plugin>
+    </plugins>
+  </build>
   <repositories>
     <repository>
       <id>eclipse-commons</id>
-      <url>http://repository.sonatype.org/content/sites/forge-sites/eclipse-commons/1.1.7/N/1.1.7.201105091728</url>
+      <url>http://repository.sonatype.org/content/sites/forge-sites/eclipse-commons/1.1.7/N/1.1.7.201105092301</url>
       <layout>p2</layout>
     </repository>
     <repository>
@@ -44,6 +54,7 @@
   <modules>
     <module>org.sonatype.m2e.subclipse</module>
     <module>org.sonatype.m2e.subclipse.feature</module>
+    <module>org.sonatype.m2e.subclipse.updatesite</module>
   </modules>
 
 </project>
